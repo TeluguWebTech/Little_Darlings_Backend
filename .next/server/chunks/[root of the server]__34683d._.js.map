@@ -1,0 +1,9 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 135, "column": 0}, "map": {"version":3,"sources":["file://C%3A/Users/ADMIN/Desktop/Little_Next/little_backend/src/app/auth.js"],"sourcesContent":["import NextAuth from \"next-auth\";\r\nimport CredentialsProvider from \"next-auth/providers/credentials\";\r\n\r\nexport default NextAuth({\r\n  providers: [\r\n    CredentialsProvider({\r\n      name: 'Credentials',\r\n      credentials: {\r\n        username: { label: \"Username\", type: \"text\" },\r\n        password: { label: \"Password\", type: \"password\" }\r\n      },\r\n      async authorize(credentials) {\r\n        // Replace this with your own authentication logic\r\n        if (credentials.username === 'admin' && credentials.password === 'admin1234') {\r\n          return { id: 1, name: \"Admin\", email: \"admin@example.com\" };\r\n        }\r\n        return null; // Invalid credentials\r\n      }\r\n    })\r\n  ],\r\n  secret: process.env.SECRET_KEY,\r\n  pages: {\r\n    error: '/auth/error', // Custom error page (optional)\r\n  },\r\n});\r\n"],"names":[],"mappings":";;;AAAA;AACA;;;uCAEe,CAAA,GAAA,uIAAA,CAAA,UAAQ,AAAD,EAAE;IACtB,WAAW;QACT,CAAA,GAAA,0JAAA,CAAA,UAAmB,AAAD,EAAE;YAClB,MAAM;YACN,aAAa;gBACX,UAAU;oBAAE,OAAO;oBAAY,MAAM;gBAAO;gBAC5C,UAAU;oBAAE,OAAO;oBAAY,MAAM;gBAAW;YAClD;YACA,MAAM,WAAU,WAAW;gBACzB,kDAAkD;gBAClD,IAAI,YAAY,QAAQ,KAAK,WAAW,YAAY,QAAQ,KAAK,aAAa;oBAC5E,OAAO;wBAAE,IAAI;wBAAG,MAAM;wBAAS,OAAO;oBAAoB;gBAC5D;gBACA,OAAO,MAAM,sBAAsB;YACrC;QACF;KACD;IACD,QAAQ,QAAQ,GAAG,CAAC,UAAU;IAC9B,OAAO;QACL,OAAO;IACT;AACF"}},
+    {"offset": {"line": 174, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"A"}},
+    {"offset": {"line": 180, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":""}},
+    {"offset": {"line": 182, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"A"}}]
+}

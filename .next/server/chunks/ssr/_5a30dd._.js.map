@@ -1,0 +1,9 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 7, "column": 0}, "map": {"version":3,"sources":["file://C%3A/Users/ADMIN/Desktop/Little_Next/little_backend/src/app/admin/page.jsx"],"sourcesContent":["import { getSession } from \"next-auth/react\"; // Use getSession instead of auth\r\nimport { redirect } from \"next/navigation\";\r\n\r\nconst AdminPage = async () => {\r\n  const session = await getSession(); // Fetch the session using getSession\r\n\r\n  if (!session || session?.user?.role !== \"admin\") {\r\n    redirect(\"/login\"); // Redirect if not admin or no session\r\n  }\r\n\r\n  return (\r\n    <div>\r\n      <h1>Welcome Admin</h1>\r\n    </div>\r\n  );\r\n};\r\n\r\nexport default AdminPage;\r\n"],"names":[],"mappings":";;;;AAAA,qPAA8C,iCAAiC;AAC/E;AAAA;;;;AAEA,MAAM,YAAY;IAChB,MAAM,UAAU,MAAM,CAAA,GAAA,8IAAA,CAAA,aAAU,AAAD,KAAK,qCAAqC;IAEzE,IAAI,CAAC,WAAW,SAAS,MAAM,SAAS,SAAS;QAC/C,CAAA,GAAA,qLAAA,CAAA,WAAQ,AAAD,EAAE,WAAW,sCAAsC;IAC5D;IAEA,qBACE,8OAAC;kBACC,cAAA,8OAAC;sBAAG;;;;;;;;;;;AAGV;uCAEe"}},
+    {"offset": {"line": 37, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"A"}},
+    {"offset": {"line": 48, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":""}},
+    {"offset": {"line": 48, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"A"}}]
+}
